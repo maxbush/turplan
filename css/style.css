@@ -13,6 +13,10 @@ header .top, nav {
   margin: auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   background-color: #fff;
 }
@@ -92,6 +96,12 @@ header .top a span {
   line-height: 18px;
   color: #333333;
   margin-left: 18px;
+}
+
+header .top .menuIcon {
+  display: none;
+  border: none;
+  background-color: #fff;
 }
 
 header .menu {
@@ -477,6 +487,9 @@ template {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  header .top .logo {
+    width: 132px;
+  }
   header .top form {
     margin-left: auto;
     max-width: 340px;
@@ -493,6 +506,19 @@ template {
 @media (max-width: 768px) {
   header .top, nav {
     max-width: 576px;
+  }
+  header .top .logo {
+    width: 99px;
+  }
+  header .top form, header .top .user {
+    display: none;
+  }
+  header .top .menuIcon {
+    display: block;
+    cursor: pointer;
+  }
+  header .menu {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

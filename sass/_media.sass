@@ -13,6 +13,8 @@
     & .top
       padding-top: 30px
       padding-bottom: 30px
+      & .logo
+        width: 132px
       & form
         margin-left: auto
         max-width: 340px
@@ -29,3 +31,14 @@
   header .top, nav
     max-width: 576px
 
+  header
+    & .top
+      & .logo
+        width: 99px
+      & form, & .user
+        display: none
+      & .menuIcon
+        display: block
+        cursor: pointer
+    & .menu
+      display: none
