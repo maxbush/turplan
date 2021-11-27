@@ -8,7 +8,7 @@ body {
   color: #333333;
 }
 
-header div {
+header .top, nav {
   max-width: 1110px;
   margin: auto;
 }
@@ -17,7 +17,7 @@ header {
   background-color: #fff;
 }
 
-header div {
+header .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +31,7 @@ header div {
   padding-bottom: 50px;
 }
 
-header div form {
+header .top form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +43,7 @@ header div form {
   margin-right: auto;
 }
 
-header div form input {
+header .top form input {
   width: 350px;
   height: 100%;
   padding-left: 23px;
@@ -55,7 +55,7 @@ header div form input {
   color: #333333;
 }
 
-header div form button {
+header .top form button {
   position: absolute;
   top: 0;
   right: 0;
@@ -65,7 +65,7 @@ header div form button {
   background-color: #EC1F46;
 }
 
-header div a {
+header .top a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +75,11 @@ header div a {
   text-decoration: none;
 }
 
-header div a .avatar {
+header .top a .logo {
+  max-width: 177px;
+}
+
+header .top a .avatar {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -83,11 +87,37 @@ header div a .avatar {
      object-fit: cover;
 }
 
-header div a span {
+header .top a span {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
   margin-left: 18px;
+}
+
+header .menu {
+  background-color: #0A223D;
+  height: 80px;
+}
+
+header .menu nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .menu nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -431,5 +461,38 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  header .top, nav {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  header .top, nav {
+    max-width: 700px;
+  }
+  header .top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  header .top form {
+    margin-left: auto;
+    max-width: 340px;
+  }
+  header .menu {
+    height: 60px;
+  }
+  header .menu nav a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .top, nav {
+    max-width: 576px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
