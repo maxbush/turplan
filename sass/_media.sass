@@ -1,12 +1,11 @@
 @media (max-width: 1200px)
 
-  header .top, nav
+  header .top, nav, .breadcrumb, .hotel
     max-width: 960px
-
 
 @media (max-width: 992px)
 
-  header .top, nav
+  header .top, nav, .breadcrumb, .hotel
     max-width: 700px
 
   header
@@ -18,7 +17,7 @@
       & form
         margin-left: auto
         & input
-         width: 340px
+          width: 340px
     & .menu
       height: 60px
       & nav
@@ -26,10 +25,9 @@
           font-size: 12px
           line-height: 15px
 
-
 @media (max-width: 768px)
- 
-  header .top, nav
+
+  header .top, nav, .breadcrumb, .hotel
     max-width: 576px
 
   header
@@ -43,8 +41,23 @@
         cursor: pointer
     & .menu
       display: none
-
+  .hotel
+    &-info
+      .right
+        display: none
+      .left
+        width: 100%
+        .hotel-wrapper
+          justify-content: space-between
+          h1
+            flex-basis: 100%
+            margin-top: 10px
+          .stars
+            flex-basis: content
+          span
+            order: -1
+            margin-left: 0
 
 @media (max-width: 576px)
-  header .top, nav
+  header .top, nav, .breadcrumb, .hotel
     max-width: 280px

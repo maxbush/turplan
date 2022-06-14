@@ -1,14 +1,14 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Mulish', sans-serif;
   color: #333333;
+  background-color: #F5FAFE;
 }
 
-header .top, nav {
+header .top, nav, .breadcrumb, .hotel {
   max-width: 1110px;
   margin: auto;
 }
@@ -22,22 +22,14 @@ header {
 }
 
 header .top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 50px;
 }
 
 header .top form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -70,12 +62,8 @@ header .top form button {
 }
 
 header .top a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -87,8 +75,7 @@ header .top a .avatar {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header .top a span {
@@ -111,15 +98,9 @@ header .menu {
 
 header .menu nav {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .menu nav a {
@@ -128,6 +109,93 @@ header .menu nav a {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 18px 0px;
+  margin: 0;
+}
+
+.breadcrumb ul li {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.breadcrumb ul li:not(:last-child)::after {
+  content: '/';
+  margin-right: 4px;
+}
+
+.breadcrumb ul li a {
+  text-decoration: none;
+}
+
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+
+.hotel-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotel-info .right {
+  max-width: 65px;
+  height: 45px;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.hotel-info .right span:first-child {
+  font-size: 8px;
+  line-height: 10px;
+  color: white;
+}
+
+.hotel-info .right span {
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+}
+
+.hotel-info .left p {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.hotel-info .left .hotel-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hotel-info .left .hotel-wrapper span {
+  font-size: 10px;
+  line-height: 13px;
+  padding: 4px 9px;
+  background-color: #EC1F46;
+  border-radius: 3px;
+  color: white;
+  margin-left: 14px;
+  margin-top: 4px;
+}
+
+.hotel-info .left .hotel-wrapper h1 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.hotel-info .left .hotel-wrapper .stars {
+  flex-basis: 100%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -176,8 +244,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -214,8 +281,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -362,8 +428,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -397,8 +462,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -474,13 +538,13 @@ template {
 }
 
 @media (max-width: 1200px) {
-  header .top, nav {
+  header .top, nav, .breadcrumb, .hotel {
     max-width: 960px;
   }
 }
 
 @media (max-width: 992px) {
-  header .top, nav {
+  header .top, nav, .breadcrumb, .hotel {
     max-width: 700px;
   }
   header .top {
@@ -506,7 +570,7 @@ template {
 }
 
 @media (max-width: 768px) {
-  header .top, nav {
+  header .top, nav, .breadcrumb, .hotel {
     max-width: 576px;
   }
   header .top .logo {
@@ -522,10 +586,30 @@ template {
   header .menu {
     display: none;
   }
+  .hotel-info .right {
+    display: none;
+  }
+  .hotel-info .left {
+    width: 100%;
+  }
+  .hotel-info .left .hotel-wrapper {
+    justify-content: space-between;
+  }
+  .hotel-info .left .hotel-wrapper h1 {
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+  .hotel-info .left .hotel-wrapper .stars {
+    flex-basis: content;
+  }
+  .hotel-info .left .hotel-wrapper span {
+    order: -1;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 576px) {
-  header .top, nav {
+  header .top, nav, .breadcrumb, .hotel {
     max-width: 280px;
   }
 }
