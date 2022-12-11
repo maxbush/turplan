@@ -2,6 +2,13 @@
 
   header .top, nav, .breadcrumb, .hotel
     max-width: 960px
+  .slider
+    width: 600px
+  .swiper-slide
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
 
 @media (max-width: 992px)
 
@@ -24,6 +31,18 @@
         & a
           font-size: 12px
           line-height: 15px
+  .slider
+    width: 100%
+    margin-bottom: 30px
+
+  .hotel-grid
+    flex-direction: column
+  .hotel-wrap
+    flex-direction: row
+    .booking
+      width: 340px
+    .map
+      width: 340px
 
 @media (max-width: 768px)
 
@@ -58,6 +77,19 @@
             order: -1
             margin-left: 0
 
+  .slider
+    height: 300px
+  .hotel-wrap
+    flex-direction: column
+    align-items: center
+    min-height: 450px
+    .booking, .map
+      width: 100%
+
 @media (max-width: 576px)
   header .top, nav, .breadcrumb, .hotel
     max-width: 280px
+  .slider
+    height: 250px
+  .hotel-wrap
+    margin-bottom: 20px

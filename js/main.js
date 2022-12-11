@@ -10,5 +10,9 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev1',
   },
 //   effect: 'cube',
+ keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
  
 });
